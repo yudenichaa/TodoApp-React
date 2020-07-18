@@ -12,7 +12,7 @@ export default class Filter extends React.Component {
                 cursor: this.props.selected ? "default" : "pointer"
             }}
                 onClick={this.props.onClick}
-            >{this.props.filter}</span>
+            >{this.props.children}</span>
         );
     }
 }

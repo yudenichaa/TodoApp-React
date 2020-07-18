@@ -11,20 +11,22 @@ export default class Filters extends React.Component {
         return (
             <p>
                 <Filter
-                    filter={todoFilters.active}
                     selected={this.props.selectedFilter == todoFilters.active}
-                    onClick={() => this.props.onFilterClick(todoFilters.active)}
-                />
+                    onClick={() => this.props.onFilterClick(todoFilters.active)}>
+                    Active
+                </Filter>
                 {", "}
                 <Filter
-                    filter={todoFilters.completed}
                     selected={this.props.selectedFilter == todoFilters.completed}
-                    onClick={() => this.props.onFilterClick(todoFilters.completed)} />
+                    onClick={() => this.props.onFilterClick(todoFilters.completed)}>
+                    Completed
+                </Filter>
                 {", "}
                 <Filter
-                    filter={todoFilters.all}
                     selected={this.props.selectedFilter == todoFilters.all}
-                    onClick={() => this.props.onFilterClick(todoFilters.all)} />
+                    onClick={() => this.props.onFilterClick(todoFilters.all)}>
+                    All
+                </Filter>
             </p>
         );
     }
